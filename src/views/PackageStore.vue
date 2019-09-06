@@ -80,6 +80,7 @@ export default {
     handleSubmit (e) {
       e.preventDefault()
       this.form.validateFields((err, values) => {
+        this.$store.dispatch("postPackages",values);
         console.log("23",values)
         if (!err) {
           console.log('Received values of form: ', values)

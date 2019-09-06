@@ -1,6 +1,6 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
-import Axios from 'axios'
+import axios from 'axios'
 
 Vue.use(Vuex)
 
@@ -13,9 +13,9 @@ export default new Vuex.Store({
   },
   actions: {
 
-    postPackage: function (context, values) {
+    postPackages: function (context, values) {
 
-      axios.post("localhost:8080/packages", {
+      axios.post("http://localhost:8080/packages", {
         addressee: values.addressee,
         telephone: values.telephone,
         trackingNumber: values.trackingNumber,
